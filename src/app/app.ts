@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Landing } from './features/landing/landing';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
+  imports: [Landing],
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('flowpay');
-}
+export class App {}

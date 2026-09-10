@@ -1,0 +1,68 @@
+.footer {
+  background: #F4F3FF;
+  padding: 40px 48px 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 32px;
+  }
+
+  &__logo-img {
+    height: 40px;
+    width: auto;
+    margin-left: 30px;
+  }
+
+  &__brand p {
+    color: #6B6390;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  &__column {
+    h4 {
+      color: #1E1B3A;
+      font-size: 13px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: #6B6390;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: #4F46E5;
+      display: flex;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #3730A3;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #E4E2FA;
+    padding: 14px 0;
+    text-align: center;
+    color: #8B85B8;
+    font-size: 11px;
+  }
+}
