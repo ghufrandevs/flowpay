@@ -1,0 +1,118 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 64px 48px;
+  background: #ffffff;
+
+  &__content {
+    flex: 1;
+    max-width: 560px;
+  }
+
+  &__badge {
+    display: inline-block;
+    background: #F4F3FF;
+    color: #4F46E5;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-family: 'Cairo', 'Outfit', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1E1B3A;
+    margin: 0 0 18px;
+
+    &-accent {
+      color: #4F46E5;
+    }
+  }
+
+  &__text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6B7280;
+    margin: 0 0 32px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__btn {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+
+    &--primary {
+      background: #4F46E5;
+      color: #ffffff;
+
+      &:hover {
+        background: #3730A3;
+      }
+    }
+
+    &--secondary {
+      background: #ffffff;
+      color: #1E1B3A;
+      border: 1px solid #E4E2FA;
+
+      &:hover {
+        border-color: #4F46E5;
+        color: #4F46E5;
+      }
+    }
+  }
+
+  &__visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 968px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 24px;
+    gap: 32px;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__actions {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__visual {
+      max-width: 320px;
+    }
+  }
+}

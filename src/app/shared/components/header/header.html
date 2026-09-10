@@ -1,7 +1,7 @@
 <header class="header">
   <img src="assets/images/flowpay-logo.png" alt="FlowPay" class="header__logo-img">
 
-  <nav class="header__nav">
+  <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
     <a (click)="scrollTo('home')">Home</a>
     <a (click)="scrollTo('about')">About</a>
     <a (click)="scrollTo('services')">Services</a>
@@ -9,4 +9,12 @@
     <a (click)="scrollTo('faq')">FAQ</a>
     <a (click)="onContactClick($event)">Contact</a>
   </nav>
+
+  <button class="header__menu-btn" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'">
+    @if (isMenuOpen()) {
+      <span>✕</span>
+    } @else {
+      <span>☰</span>
+    }
+  </button>
 </header>

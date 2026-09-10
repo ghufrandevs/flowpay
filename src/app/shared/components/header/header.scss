@@ -12,7 +12,7 @@
   &__logo-img {
     height: 40px;
     width: auto;
-    margin-left: 35px;
+    margin-left: 55px;
   }
 
   &__nav {
@@ -23,7 +23,7 @@
     gap: 60px;
 
     a {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 600;
       color: #1E1B3A;
       cursor: pointer;
@@ -32,6 +32,55 @@
       &:hover {
         color: #4F46E5;
       }
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #1E1B3A;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 16px 24px;
+    position: relative;
+
+    &__nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      transform: none;
+      background: #ffffff;
+      border-bottom: 1px solid #E4E2FA;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding: 8px 0;
+
+      a {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+
+        &:hover {
+          background: #F4F3FF;
+        }
+      }
+
+      &--open {
+        display: flex;
+      }
+    }
+
+    &__menu-btn {
+      display: block;
     }
   }
 }

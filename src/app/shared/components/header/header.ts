@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +9,20 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class Header {
   @Output() contactClick = new EventEmitter<void>();
 
+  isMenuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.isMenuOpen.update(open => !open);
+  }
+
   scrollTo(sectionId: string): void {
-    const el = document.getElementById(sectionId);
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.isMenuOpen.set(false);
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   onContactClick(event: Event): void {
     event.preventDefault();
+    this.isMenuOpen.set(false);
     this.contactClick.emit();
   }
 }
