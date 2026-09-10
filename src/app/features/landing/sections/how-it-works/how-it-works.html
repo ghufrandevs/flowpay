@@ -1,0 +1,12 @@
+<section id="how-it-works" class="how-it-works" appScrollReveal>
+  <div class="how-it-works__intro">
+    <h2 class="how-it-works__title">Get Started in Three Simple Steps</h2>
+    <p class="how-it-works__text">A quick, straightforward process to get you up and running.</p>
+  </div>
+
+  <div class="how-it-works__grid">
+    @for (step of steps; track step.id) {
+      <app-step-card [step]="step"></app-step-card>
+    }
+  </div>
+</section>
