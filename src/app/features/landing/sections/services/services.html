@@ -1,0 +1,13 @@
+<section id="services" class="services">
+  <div class="services__intro">
+    <span class="services__badge">Our Services</span>
+    <h2 class="services__title">Financial Solutions<br>For <span class="services__title-accent">Every Need</span></h2>
+    <p class="services__text">Simple, secure and flexible payment solutions designed for individuals and businesses.</p>
+  </div>
+
+  <div class="services__grid">
+    @for (service of services; track service.id; let i = $index) {
+      <app-service-card [service]="service" [accent]="i % 2 === 0"></app-service-card>
+    }
+  </div>
+</section>

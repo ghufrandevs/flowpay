@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: 3,
-    icon: 'building-store',
+    icon: 'store',
     title: 'Merchant Solutions',
     description: 'Power your business with easy payment tools.'
   },

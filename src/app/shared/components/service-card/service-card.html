@@ -1,0 +1,12 @@
+<article class="service-card" [class.service-card--accent]="accent">
+  <div class="service-card__icon">
+    <svg [lucideIcon]="service.icon" [size]="22"></svg>
+  </div>
+
+  <h3 class="service-card__title">{{ service.title }}</h3>
+  <p class="service-card__description">{{ service.description }}</p>
+
+  <div class="service-card__arrow">
+    <svg lucideArrowRight [size]="16"></svg>
+  </div>
+</article>
