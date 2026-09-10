@@ -1,0 +1,15 @@
+<div class="faq-item" [class.faq-item--open]="isOpen()">
+  <button
+    class="faq-item__question"
+    type="button"
+    (click)="toggle()"
+    [attr.aria-expanded]="isOpen()"
+  >
+    <span>{{ faq.question }}</span>
+    <svg lucideChevronDown [size]="18" class="faq-item__icon"></svg>
+  </button>
+
+  <div class="faq-item__answer">
+    <p>{{ faq.answer }}</p>
+  </div>
+</div>

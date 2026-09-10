@@ -6,10 +6,11 @@ import { About } from './sections/about/about';
 import { Services } from './sections/services/services';
 import { Statistics } from './sections/statistics/statistics';
 import { HowItWorks } from './sections/how-it-works/how-it-works';
+import { Faq } from './sections/faq/faq';
 
 @Component({
   selector: 'app-landing',
-  imports: [Header, Footer, Hero, About, Services, Statistics, HowItWorks],
+  imports: [Header, Footer, Hero, About, Services, Statistics, HowItWorks, Faq],
   templateUrl: './landing.html',
   styleUrl: './landing.scss'
 })
