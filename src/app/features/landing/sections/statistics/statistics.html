@@ -1,0 +1,10 @@
+<section class="statistics" appScrollReveal>
+  <div class="statistics__grid">
+    @for (stat of statistics; track stat.id) {
+      <div class="statistics__item">
+        <div class="statistics__value">{{ stat.value }}{{ stat.suffix }}</div>
+        <div class="statistics__label">{{ stat.label }}</div>
+      </div>
+    }
+  </div>
+</section>

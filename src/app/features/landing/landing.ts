@@ -4,10 +4,11 @@ import { Footer } from '../../shared/components/footer/footer';
 import { Hero } from './sections/hero/hero';
 import { About } from './sections/about/about';
 import { Services } from './sections/services/services';
+import { Statistics } from './sections/statistics/statistics';
 
 @Component({
   selector: 'app-landing',
-  imports: [Header, Footer, Hero, About, Services],
+  imports: [Header, Footer, Hero, About, Services, Statistics],
   templateUrl: './landing.html',
   styleUrl: './landing.scss'
 })
