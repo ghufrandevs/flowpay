@@ -1,14 +1,17 @@
-<app-header></app-header>
+<app-header (contactClick)="openContactModal()"></app-header>
 
 <main>
-  <app-hero (contactClick)="onContactClick()"></app-hero>
+  <app-hero (contactClick)="openContactModal()"></app-hero>
   <app-about></app-about>
   <app-services></app-services>
   <app-statistics></app-statistics>
   <app-how-it-works></app-how-it-works>
   <app-faq></app-faq>
-
-  <p style="padding: 60px; text-align: center;">قسم Contact يُبنى تاليًا...</p>
+  <app-contact
+    [isOpen]="isContactModalOpen()"
+    (openModalRequest)="openContactModal()"
+    (closeModalRequest)="closeContactModal()"
+  ></app-contact>
 </main>
 
 <app-footer></app-footer>

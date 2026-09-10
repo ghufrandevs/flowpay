@@ -1,0 +1,61 @@
+<section id="contact" class="contact" appScrollReveal>
+  <div class="contact__banner">
+    <div>
+      <h2>Still have questions?</h2>
+      <p>Our team is here to help — reach out and we'll get back to you shortly.</p>
+    </div>
+    <button type="button" class="contact__cta" (click)="openModalRequest.emit()">
+      Contact Us
+    </button>
+  </div>
+</section>
+
+@if (isOpen) {
+  <div class="contact-modal-overlay" (click)="onOverlayClick($event)">
+    <div class="contact-modal">
+      <button type="button" class="contact-modal__close" (click)="close()" aria-label="Close">✕</button>
+
+      @if (isSubmitted) {
+        <div class="contact-modal__success">
+          <h3>Message Sent ✅</h3>
+          <p>Thanks for reaching out — we'll get back to you within one business day.</p>
+        </div>
+      } @else {
+        <h3 class="contact-modal__title">Get In Touch</h3>
+        <p class="contact-modal__subtitle">We'll get back to you within one business day.</p>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-modal__form">
+          <div class="contact-modal__field">
+            <input type="text" formControlName="name" placeholder="Name*">
+            @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+              <span class="contact-modal__error">Enter your name</span>
+            }
+          </div>
+
+          <div class="contact-modal__field">
+            <input type="email" formControlName="email" placeholder="Email*">
+            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+              <span class="contact-modal__error">Enter a valid email</span>
+            }
+          </div>
+
+          <div class="contact-modal__field">
+            <input type="tel" formControlName="phone" placeholder="Phone number*">
+            @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
+              <span class="contact-modal__error">Enter your phone number</span>
+            }
+          </div>
+
+          <div class="contact-modal__field">
+            <textarea formControlName="message" placeholder="Your message*" rows="5"></textarea>
+            @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+              <span class="contact-modal__error">Enter a message</span>
+            }
+          </div>
+
+          <button type="submit" class="contact-modal__submit">Send message</button>
+        </form>
+      }
+    </div>
+  </div>
+}
