@@ -1,9 +1,13 @@
 <section id="home" class="hero" appScrollReveal>
+
   <div class="hero__content">
-    <span class="hero__badge">Smarter Finance for a Brighter Tomorrow</span>
+    <span class="hero__badge">
+      Smarter Finance for a Brighter Tomorrow
+    </span>
 
     <h1 class="hero__title">
-      Your Money,<br><span class="hero__title-accent">One Simple Flow.</span>
+      Your Money,<br>
+      <span class="hero__title-accent">One Simple Flow.</span>
     </h1>
 
     <p class="hero__text">
@@ -11,16 +15,46 @@
     </p>
 
     <div class="hero__actions">
-      <button class="hero__btn hero__btn--primary" (click)="onContactClick()">
+      <button
+        class="hero__btn hero__btn--primary"
+        (click)="onContactClick()">
         Get in Touch
       </button>
-      <button class="hero__btn hero__btn--secondary" (click)="scrollToServices()">
+
+      <button
+        class="hero__btn hero__btn--secondary"
+        (click)="scrollToServices()">
         Explore FlowPay
       </button>
     </div>
   </div>
 
   <div class="hero__visual">
-    <img src="assets/images/hero-app-mockup.png" alt="FlowPay mobile app showing balance and recent transactions" class="hero__image">
+
+    <!-- Decorative wave behind the hero image -->
+    <svg
+      class="hero__wave"
+      viewBox="0 0 1600 220"
+      preserveAspectRatio="none"
+      aria-hidden="true">
+
+      <path
+        d="M0 80
+           C180 115 330 155 540 145
+           C760 135 900 65 1080 45
+           C1270 25 1430 35 1600 65
+           L1600 220
+           L0 220
+           Z">
+      </path>
+
+    </svg>
+
+    <img
+      src="assets/images/hero-app-mockup.png"
+      alt="FlowPay mobile app showing balance and recent transactions"
+      class="hero__image">
+
   </div>
+
 </section>

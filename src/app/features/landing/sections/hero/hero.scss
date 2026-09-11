@@ -1,118 +1,324 @@
 .hero {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 48px;
+
   max-width: 1320px;
   margin: 0 auto;
-  padding: 64px 48px;
+
+  padding:  80px 48px 60px;
+
   background: #ffffff;
+
+  overflow: hidden;
+
+
+  // =========================
+  // CONTENT
+  // =========================
 
   &__content {
     flex: 1;
+
     max-width: 560px;
+
+    position: relative;
+
+    z-index: 5;
   }
+
+
+  // =========================
+  // BADGE
+  // =========================
 
   &__badge {
     display: inline-block;
+
     background: #F4F3FF;
+
     color: #4F46E5;
+
     padding: 6px 16px;
+
     border-radius: 999px;
+
     font-size: 13px;
+
     font-weight: 600;
+
     margin-bottom: 20px;
   }
 
+
+  // =========================
+  // TITLE
+  // =========================
+
   &__title {
     font-family: 'Cairo', 'Outfit', sans-serif;
+
     font-size: 48px;
+
     font-weight: 700;
+
     line-height: 1.25;
+
     color: #1E1B3A;
+
     margin: 0 0 18px;
+
 
     &-accent {
       color: #4F46E5;
     }
   }
 
+
+  // =========================
+  // TEXT
+  // =========================
+
   &__text {
     font-size: 17px;
+
     line-height: 1.7;
+
     color: #6B7280;
+
     margin: 0 0 32px;
   }
 
+
+  // =========================
+  // ACTIONS
+  // =========================
+
   &__actions {
     display: flex;
+
     gap: 14px;
   }
 
+
+  // =========================
+  // BUTTONS
+  // =========================
+
   &__btn {
     font-size: 15px;
+
     font-weight: 600;
+
     padding: 14px 28px;
+
     border-radius: 999px;
+
     cursor: pointer;
+
     transition: all 0.2s ease;
+
     border: none;
+
 
     &--primary {
       background: #4F46E5;
+
       color: #ffffff;
+
 
       &:hover {
         background: #3730A3;
       }
     }
 
+
     &--secondary {
       background: #ffffff;
+
       color: #1E1B3A;
+
       border: 1px solid #E4E2FA;
+
 
       &:hover {
         border-color: #4F46E5;
+
         color: #4F46E5;
       }
     }
   }
 
+
+  // =========================
+  // VISUAL
+  // =========================
+
   &__visual {
     flex: 1;
+
+    position: relative;
+
     display: flex;
+
     justify-content: center;
+
+    align-items: flex-end;
+
+    min-height: 500px;
+
+    z-index: 2;
   }
+
+
+  // =========================
+  // HERO IMAGE
+  // =========================
 
   &__image {
-    max-width: 100%;
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 720px;
+
     height: auto;
+
+    display: block;
+
+    transform: translate(35px, 35px)
+  }
+
+
+  // =========================
+  // WAVE
+  // =========================
+
+  &__wave {
+  position: absolute;
+
+  z-index: 2;
+
+  left: -105%;
+
+  bottom: -35px;
+
+  width: 230%;
+
+  height: 150px;
+
+  pointer-events: none;
+
+  overflow: visible;
+
+  path {
+    fill: #8D68FD;
   }
 }
+}
+
+
+// ========================================
+// TABLET
+// ========================================
 
 @media (max-width: 968px) {
+
   .hero {
     flex-direction: column-reverse;
+
     text-align: center;
-    padding: 40px 24px;
+
+    padding: 40px 24px 0;
+
     gap: 32px;
+
 
     &__content {
       max-width: 100%;
     }
 
+
     &__title {
       font-size: 32px;
     }
 
+
     &__actions {
       justify-content: center;
+
       flex-wrap: wrap;
     }
 
+
     &__visual {
-      max-width: 320px;
+      width: 100%;
+
+      max-width: 600px;
+
+      min-height: 380px;
     }
+
+
+    &__image {
+      max-width: 100%;
+
+      transform: none;
+    }
+
+
+    &__wave {
+      left: -30%;
+
+      width: 160%;
+
+      height: 130px;
+
+      bottom: -5px;
+    }
+  }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 32px 20px 0;
+  }
+
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+
+  .hero__text {
+    font-size: 15px;
+  }
+
+
+  .hero__visual {
+    min-height: 300px;
+  }
+
+
+  .hero__wave {
+    height: 100px;
+
+    left: -25%;
+
+    width: 150%;
+
+    bottom: -5px;
   }
 }

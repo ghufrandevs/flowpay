@@ -7,7 +7,7 @@
     <a (click)="scrollTo('services')">Services</a>
     <a (click)="scrollTo('how-it-works')">How It Works</a>
     <a (click)="scrollTo('faq')">FAQ</a>
-    <a (click)="onContactClick($event)">Contact</a>
+    <a class="contact-link" (click)="onContactClick($event)">Contact</a>
   </nav>
 
   <button class="header__menu-btn" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'">

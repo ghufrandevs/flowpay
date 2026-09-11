@@ -35,6 +35,20 @@
     }
   }
 
+  // Contact button
+  .contact-link {
+    background: #F4F3FF;
+    color: #4F46E5 !important;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #E9E7FF;
+      color: #3730A3 !important;
+    }
+  }
+
   &__menu-btn {
     display: none;
     background: none;
