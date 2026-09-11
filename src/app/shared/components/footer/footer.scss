@@ -1,5 +1,5 @@
 .footer {
-  background: #F4F3FF;
+  background: var(--color-primary-light);
   padding: 40px 48px 0;
 
   &__grid {
@@ -19,7 +19,7 @@
   }
 
   &__brand p {
-    color: #6B6390;
+    color: var(--color-text-footer);
     font-size: 14px;
     margin-top: 10px;
     line-height: 1.6;
@@ -32,12 +32,12 @@
     gap: 5px;
     margin-top: 14px;
     font-size: 13.5px;
-    color: #6B6390;
+    color: var(--color-text-footer);
   }
 
   &__column {
     h4 {
-      color: #1E1B3A;
+      color: var(--color-text);
       font-size: 15px;
       margin-bottom: 12px;
       font-weight: 600;
@@ -52,14 +52,14 @@
         margin-bottom: 10px;
 
         a {
-          color: #6B6390;
+          color: var(--color-text-footer);
           font-size: 13.5px;
           text-decoration: none;
           cursor: pointer;
-          transition: color 0.2s ease;
+          transition: color var(--transition-fast);
 
           &:hover {
-            color: #4F46E5;
+            color: var(--color-primary);
           }
         }
       }
@@ -71,15 +71,15 @@
     border: none;
     padding: 0;
     margin: 0;
-    color: #6B6390;
+    color: var(--color-text-footer);
     font-size: 13.5px;
     font-family: inherit;
     text-decoration: none;
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 
     &:hover {
-      color: #4F46E5;
+      color: var(--color-primary);
     }
   }
 
@@ -102,18 +102,18 @@
     gap: 10px;
 
     a {
-      color: #4F46E5;
+      color: var(--color-primary);
       display: flex;
-      transition: color 0.2s ease;
+      transition: color var(--transition-fast);
 
       &:hover {
-        color: #3730A3;
+        color: var(--color-primary-dark);
       }
     }
   }
 
   &__bottom {
-    border-top: 1px solid #E4E2FA;
+    border-top: 1px solid var(--color-border);
     padding: 16px 0;
     text-align: center;
     color: #8B85B8;

@@ -2,7 +2,7 @@
   max-width: 1320px;
   margin: 0 auto;
   padding: 80px 48px;
-  background: #F9F8FD;
+  background: var(--color-background);
 
   &__intro {
     text-align: center;
@@ -14,13 +14,13 @@
     font-family: 'Cairo', 'Outfit', sans-serif;
     font-size: 30px;
     font-weight: 700;
-    color: #1E1B3A;
+    color: var(--color-text);
     margin: 0 0 10px;
   }
 
   &__text {
     font-size: 18px;
-    color: #6B7280;
+    color: var(--color-text-secondary);
     margin: 0;
   }
 

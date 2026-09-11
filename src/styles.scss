@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // Brand colors
+  --color-primary: #4F46E5;
+  --color-primary-dark: #3730A3;
+  --color-primary-light: #F4F3FF;
+
+  // Text colors
+  --color-text: #1E1B3A;
+  --color-text-secondary: #6B7280;
+  --color-text-footer: #6B6390;
+
+  // Background colors
+  --color-white: #FFFFFF;
+  --color-background: #F9F8FD;
+
+  // Border colors
+  --color-border: #E4E2FA;
+  --color-border-light: #ECE9FB;
+
+  // Accent
+  --color-accent: #C9C2F7;
+
+  // Border radius
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.3s ease;
+}
