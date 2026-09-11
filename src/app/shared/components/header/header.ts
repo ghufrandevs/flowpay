@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { scrollToSection } from '../../utils/scroll';
 
 @Component({
   selector: 'app-header',
@@ -15,13 +16,13 @@ export class Header {
     this.isMenuOpen.update(open => !open);
   }
 
-  scrollTo(sectionId: string): void {
+  scrollTo(sectionId: string, event: Event): void {
+    event.preventDefault();
     this.isMenuOpen.set(false);
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToSection(sectionId);
   }
 
-  onContactClick(event: Event): void {
-    event.preventDefault();
+  onContactClick(): void {
     this.isMenuOpen.set(false);
     this.contactClick.emit();
   }

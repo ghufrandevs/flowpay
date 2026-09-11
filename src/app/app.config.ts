@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideLucideIcons, LucideCreditCard, LucideSend, LucideStore, LucideReceipt, LucideWallet, LucidePlug, LucideShieldCheck, LucideZap, LucideSparkles, LucideTarget, LucideEye, LucideArrowRight, LucideChevronDown } from '@lucide/angular';
+import { provideLucideIcons, LucideCreditCard, LucideSend, LucideStore, LucideReceipt, LucideWallet, LucidePlug, LucideTarget, LucideEye, LucideArrowRight, LucideChevronDown } from '@lucide/angular';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -14,9 +14,6 @@ export const appConfig: ApplicationConfig = {
       LucideReceipt,
       LucideWallet,
       LucidePlug,
-      LucideShieldCheck,
-      LucideZap,
-      LucideSparkles,
       LucideTarget,
       LucideEye,
       LucideArrowRight,

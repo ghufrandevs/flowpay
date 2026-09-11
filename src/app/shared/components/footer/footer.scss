@@ -3,11 +3,11 @@
   padding: 40px 48px 0;
 
   &__grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 24px;
-  padding-bottom: 32px;
-}
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 32px;
+  }
 
   &__brand {
     text-align: center;
@@ -66,19 +66,36 @@
     }
   }
 
+  &__link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #6B6390;
+    font-size: 13.5px;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #4F46E5;
+    }
+  }
+
   &__quick-links {
-  text-align: center;
-
-  h4 {
     text-align: center;
-  }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    h4 {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
-}
 
   &__socials {
     display: flex;

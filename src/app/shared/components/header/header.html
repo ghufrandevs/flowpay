@@ -2,12 +2,12 @@
   <img src="assets/images/flowpay-logo.png" alt="FlowPay" class="header__logo-img">
 
   <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
-    <a (click)="scrollTo('home')">Home</a>
-    <a (click)="scrollTo('about')">About</a>
-    <a (click)="scrollTo('services')">Services</a>
-    <a (click)="scrollTo('how-it-works')">How It Works</a>
-    <a (click)="scrollTo('faq')">FAQ</a>
-    <a class="contact-link" (click)="onContactClick($event)">Contact</a>
+    <a href="#home" (click)="scrollTo('home', $event)">Home</a>
+    <a href="#about" (click)="scrollTo('about', $event)">About</a>
+    <a href="#services" (click)="scrollTo('services', $event)">Services</a>
+    <a href="#how-it-works" (click)="scrollTo('how-it-works', $event)">How It Works</a>
+    <a href="#faq" (click)="scrollTo('faq', $event)">FAQ</a>
+    <button type="button" class="contact-link" (click)="onContactClick()">Contact</button>
   </nav>
 
   <button class="header__menu-btn" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'">

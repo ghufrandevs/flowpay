@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { scrollToSection } from '../../utils/scroll';
 
 @Component({
   selector: 'app-footer',
@@ -11,12 +12,12 @@ export class Footer {
 
   @Output() contactClick = new EventEmitter<void>();
 
-  scrollTo(sectionId: string): void {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollTo(sectionId: string, event: Event): void {
+    event.preventDefault();
+    scrollToSection(sectionId);
   }
 
-  onContactClick(event: Event): void {
-    event.preventDefault();
+  onContactClick(): void {
     this.contactClick.emit();
   }
 }

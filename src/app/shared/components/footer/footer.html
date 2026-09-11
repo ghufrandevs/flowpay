@@ -24,19 +24,19 @@
 
       <ul>
         <li>
-          <a (click)="scrollTo('home')">Home</a>
+          <a href="#home" (click)="scrollTo('home', $event)">Home</a>
         </li>
 
         <li>
-          <a (click)="scrollTo('about')">About</a>
+          <a href="#about" (click)="scrollTo('about', $event)">About</a>
         </li>
 
         <li>
-          <a (click)="scrollTo('services')">Services</a>
+          <a href="#services" (click)="scrollTo('services', $event)">Services</a>
         </li>
 
         <li>
-          <a (click)="onContactClick($event)">Contact</a>
+          <button type="button" class="footer__link-btn" (click)="onContactClick()">Contact</button>
         </li>
       </ul>
     </div>
@@ -47,19 +47,19 @@
 
       <ul>
         <li>
-          <a (click)="scrollTo('services')">Payments</a>
+          <a href="#services" (click)="scrollTo('services', $event)">Payments</a>
         </li>
 
         <li>
-          <a (click)="scrollTo('services')">Transfers</a>
+          <a href="#services" (click)="scrollTo('services', $event)">Transfers</a>
         </li>
 
         <li>
-          <a (click)="scrollTo('services')">Wallet</a>
+          <a href="#services" (click)="scrollTo('services', $event)">Wallet</a>
         </li>
 
         <li>
-          <a (click)="scrollTo('services')">Gateway</a>
+          <a href="#services" (click)="scrollTo('services', $event)">Gateway</a>
         </li>
       </ul>
     </div>
