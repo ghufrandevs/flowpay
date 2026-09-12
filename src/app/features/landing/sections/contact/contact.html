@@ -12,7 +12,7 @@
 
 @if (isOpen) {
   <div class="contact-modal-overlay" (click)="onOverlayClick($event)">
-    <div class="contact-modal">
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
       <button type="button" class="contact-modal__close" (click)="close()" aria-label="Close">✕</button>
 
       @if (isSubmitted) {
@@ -21,13 +21,13 @@
           <p>Thanks for reaching out — we'll get back to you within one business day.</p>
         </div>
       } @else {
-        <h3 class="contact-modal__title">Get In Touch</h3>
+        <h3 class="contact-modal__title" id="contact-modal-title">Get In Touch</h3>
         <p class="contact-modal__subtitle">We'll get back to you within one business day.</p>
 
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-modal__form">
           <div class="contact-modal__field">
             <label for="contact-name" class="sr-only">Name</label>
-            <input id="contact-name" type="text" formControlName="name" placeholder="Name*">
+            <input id="contact-name" #firstField type="text" formControlName="name" placeholder="Name*">
             @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
               <span class="contact-modal__error">Enter your name</span>
             }

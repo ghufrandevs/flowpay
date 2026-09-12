@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, Output, ViewChild } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ScrollReveal } from '../../../../shared/directives/scroll-reveal';
 
@@ -13,6 +13,8 @@ export class Contact {
   @Output() openModalRequest = new EventEmitter<void>();
   @Output() closeModalRequest = new EventEmitter<void>();
 
+  @ViewChild('firstField') firstField?: ElementRef<HTMLInputElement>;
+
   contactForm: FormGroup;
   isSubmitted = false;
 
@@ -23,6 +25,19 @@ export class Contact {
       phone: ['', Validators.required],
       message: ['', Validators.required]
     });
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
+    if (this.isOpen) {
+      this.close();
+    }
+  }
+
+  ngOnChanges(): void {
+    if (this.isOpen) {
+      setTimeout(() => this.firstField?.nativeElement.focus(), 50);
+    }
   }
 
   onSubmit(): void {
