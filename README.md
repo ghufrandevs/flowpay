@@ -50,11 +50,11 @@ Open the application in your browser at:
 http://localhost:4200/
 ```
 
-## Project Structure
+## 📁 Project Structure
 
-The application is organized using standalone Angular components with shared directives, utilities, models, and static data.
+The application is organized into reusable standalone Angular components and shared directives, grouped by feature and responsibility.
 
-``text
+```text
 src/
 ├── app/
 │   ├── features/
